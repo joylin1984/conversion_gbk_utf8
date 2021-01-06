@@ -7,8 +7,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: Pack
       run: |
-        vcpkg install drogon:x64-windows
-        vcpkg export drogon:x64-windows --zip
+        vcpkg install xlnt:x64-windows
+        vcpkg export xlnt:x64-windows --zip
     - uses: actions/upload-artifact@v2
       with:
         name: Upload
