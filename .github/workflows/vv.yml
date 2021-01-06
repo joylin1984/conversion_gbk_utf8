@@ -5,10 +5,10 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Add msbuild to PATH
-    - uses: microsoft/setup-msbuild@v1.0.2
+    - name: Enable Developer Command Prompt
+      uses: ilammy/msvc-dev-cmd@v1.5.0
       with:
-        vs-version: '[15.8, 15.9)'
+        toolset: 14.0 
     - name: Pack
       run: |
         vcpkg install xlnt:x64-windows
