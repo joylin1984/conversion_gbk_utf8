@@ -8,12 +8,12 @@ jobs:
     - name: Enable Developer Command Prompt
       uses: ilammy/msvc-dev-cmd@v1.5.0
       with:
-        toolset: 14.0 
-    - name: Pack
-      run: |
-        vcpkg install xlnt:x64-windows
-        vcpkg export xlnt:x64-windows --zip
-    - uses: actions/upload-artifact@v2
-      with:
-        name: Upload
-        path: C:/vcpkg/*.zip
+        toolset: 15.XX 
+#     - name: Pack
+#       run: |
+#         vcpkg install xlnt:x64-windows
+#         vcpkg export xlnt:x64-windows --zip
+#     - uses: actions/upload-artifact@v2
+#       with:
+#         name: Upload
+#         path: C:/vcpkg/*.zip
